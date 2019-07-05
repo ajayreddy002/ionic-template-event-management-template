@@ -1,0 +1,94 @@
+.user_icon {
+    width: 18px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.home_icon {
+    width: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+ion-title {
+    color: #464343;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.popular {
+    h1 {
+        font-size: 12px;
+        margin-left: 15px;
+        color: #636060;
+        text-transform: uppercase;
+        margin-bottom: -20px;
+    }
+
+    ion-row {
+        margin: 0 -15px;
+    }
+
+    ion-col {
+        border: 1px solid#96939336;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+        }
+
+        p {
+            font-size: 8px;
+            color: #000;
+            font-family: 'Poppins', sans-serif;
+            line-height: 10px;
+            font-weight: 500;
+        }
+    }
+}
+
+.input_block {
+    .name_block {
+        margin: 0 5px;
+
+        p {
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        span {
+            float: right;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+
+    .btn_block {
+        cursor: pointer;
+
+        button {
+            background: none;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        ion-icon {
+            float: right;
+            margin-right: 15px;
+            font-size: 20px;
+            color: #3aa594;
+        }
+    }
+}
+
+.input_field {
+
+    border: 1px solid;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+}

@@ -1,3 +1,88 @@
-<p>
-  booking works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <img src="../../assets/custom-icons/web-page-home.svg" alt="" class="home_icon">
+    <ion-title>
+      Book An Event
+    </ion-title>
+    <img src="../../assets/custom-icons/user.svg" alt="" class="user_icon">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ng-container *ngIf="isCity">
+    <ion-searchbar autocomplete placeholder="select your city"></ion-searchbar>
+    <div class="popular">
+      <h1>Popular Cities</h1>
+      <div>
+        <ion-card>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="3" (click)="showCityBlock('Hyderabad')">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Hyderabad</p>
+                </ion-col>
+                <ion-col size="3" (click)="showCityBlock('Banglore')">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Banglore</p>
+                </ion-col>
+                <ion-col size="3" (click)="showCityBlock('Chennai')">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Chennai</p>
+                </ion-col>
+                <ion-col size="3" (click)="showCityBlock('Mumbai')">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Mumbai</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="3">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Hyderabad</p>
+                </ion-col>
+                <ion-col size="3">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Banglore</p>
+                </ion-col>
+                <ion-col size="3">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Chennai</p>
+                </ion-col>
+                <ion-col size="3">
+                  <img src="../../assets/custom-icons/cityscape.png" alt="">
+                  <p>Mumbai</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </ng-container>
+  <div class="input_block" *ngIf="!isCity">
+    <div class="btn_block" *ngIf="!citytName">
+      <button type="button" (click)="showCityBlock()">Select your city</button>
+      <span>
+        <ion-icon name="arrow-round-forward"></ion-icon>
+      </span>
+    </div>
+    <div *ngIf="citytName" class="name_block">
+      <p>Selected City {{citytName}} <span (click)="showCityBlock()">Change</span></p>
+    </div>
+    <div class="form-group">
+      <label for="" slot="start">Date</label>
+      <ion-datetime class="input_field" displayFormat="DD/MM/YYYY" min="{{today}}" placeholder="DD/MM/YYYY">
+      </ion-datetime>
+    </div>
+    <div class="form-group">
+      <ion-label slot="start">Veg </ion-label>
+      <ion-range min="0" max="3000" color="success" pin="true"></ion-range>
+    </div>
+    <div class="form-group">
+      <ion-label slot="start">Non Veg </ion-label>
+      <ion-range min="0" max="3000" color="danger" pin="true" type="md"></ion-range>
+    </div>
+    <div style="text-align: center">
+      <ion-button size="small" color="primary">Submit</ion-button>
+    </div>
+  </div>
+</ion-content>
