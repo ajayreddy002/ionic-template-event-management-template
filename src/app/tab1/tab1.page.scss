@@ -1,0 +1,10 @@
+.main_block {
+    position: relative;
+    .img_block {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

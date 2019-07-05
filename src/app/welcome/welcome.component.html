@@ -1,0 +1,48 @@
+<div class="welcome_block" *ngIf="isWelcome">
+  <div class="blue_layer"></div>
+  <div class="text_block">
+    <h2>Welcome!</h2>
+    <button type="button" (click)="getSlider()">Get Started</button>
+  </div>
+</div>
+<div class="slider_block" *ngIf="!isWelcome">
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="../../assets/chef2.jpg" alt="">
+        <div class="slide_text">
+          <h1>Easy to order your food</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
+            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/food1.jpg" alt="">
+        <div class="slide_text">
+          <h1>Easy to prepare your food</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
+            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/chef1.jpg" alt="">
+        <div class="slide_text">
+          <h1>Easy to prepare your food</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
+            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/food2.jpg" alt="">
+        <div class="last_slide_text">
+          <h1>Why Are you waiting?</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button type="button">Lets Expolre!</button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <div class="skip-class">
+      <p>Skip -></p>
+    </div>
+  </div>
+</div>
