@@ -1,3 +1,51 @@
-<p>
-  signin works!
-</p>
+<div>
+  <div class="sign_in_block">
+    <h1>Cater<span class="binge">binge</span></h1>
+    <img slot="center" *ngIf="isSignIn" src="../../assets/images/login.svg" alt="">
+    <img slot="center" *ngIf="isReg" src="../../assets/images/signup.svg" alt="">
+    <div class="signi_in">
+      <button class="sign" [ngClass]="{'active': isSignIn}" (click)="showSignInForm('signin')">Signin</button>
+      <button class="reg" [ngClass]="{'active1': isReg}" (click)="showRegForm('register')">Register</button>
+    </div>
+  </div>
+  <div class="input_block" *ngIf="isSignIn">
+    <div class="input_field">
+      <span>
+        <ion-icon name="mail"></ion-icon>
+      </span> <input type="email" placeholder="Email">
+    </div>
+    <div class="input_field">
+      <span>
+        <ion-icon name="lock" class="lock"></ion-icon>
+      </span> <input type="password" placeholder="Password">
+    </div>
+    <div class="btn_block">
+      <button type="button" routerLink="/tabs">Sign In</button>
+      <p>Forgot Password ?</p>
+      <button type="button" class="social">Sign in with facebook</button>
+      <p routerLink="/tabs">Skip</p>
+    </div>
+  </div>
+  <div class="input_block" *ngIf="isReg">
+    <div class="input_field">
+      <span>
+        <ion-icon name="person"></ion-icon>
+      </span> <input type="text" placeholder="Name">
+    </div>
+    <div class="input_field">
+      <span>
+        <ion-icon name="mail" class="person"></ion-icon>
+      </span> <input type="email" placeholder="Email">
+    </div>
+    <div class="input_field">
+      <span>
+        <ion-icon name="lock" class="lock"></ion-icon>
+      </span> <input type="password" placeholder="Password">
+    </div>
+    <div class="btn_block">
+      <button type="button" routerLink="/tabs">Signup</button>
+      <p class="signup">Or</p>
+      <button type="button" class="social">Signup with facebook</button>
+    </div>
+  </div>
+</div>

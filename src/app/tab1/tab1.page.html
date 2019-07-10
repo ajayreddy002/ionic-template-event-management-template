@@ -1,29 +1,65 @@
-<ion-header no-border>
-  <ion-toolbar >
-    <ion-title class="event_title">
-      Welcome to 
-      <!-- <span class="cater">Cater</span> <span class="binge">binge</span> -->
-    </ion-title>
+<ion-header no-border class="padd">
+  <ion-toolbar>
+    <h1 slot="start">Cater <span class="binge">binge</span></h1>
+    <ion-icon name="search" slot="end"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <div class="main_block">
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <ion-card-subtitle class="sub_tit">BECOME A PARTNER</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <div class="row">
-          <div class="col-6">
-            <div class="card">
-              <div>
-                <p>Chef booking</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ion-card-content>
-    </ion-card>
+<ion-content>
+  <!-- <div class="content_block">
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <ion-card class="card1">
+          <h2>Offer 1</h2>
+          <ion-card-content>
+            Get Cashback best offers here
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card2">
+          <h2>Offer 2</h2>
+          <ion-card-content>
+            Get Cashback best offers here
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card class="card3">
+          <h2>Offer 3</h2>
+          <ion-card-content>
+            Get Cashback best offers here
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div> -->
+  <div class="book padd">
+    <div class="city_block">
+      <p class="city">city</p>
+      <div class="in_block">
+        <h3>Hyderabad</h3>
+        <h5>Change</h5>
+      </div>
+      <p class="city">Area</p>
+      <div class="in_block">
+        <h3>Punjagutta</h3>
+        <h5>Change</h5>
+      </div>
+      <div class="veg_block">
+        <h3>Veg <span class="veg"></span></h3>
+        <h5>0</h5>
+      </div>
+      <div>
+          <ion-range color="success" pin="true" no-padding></ion-range>
+      </div>
+      <div class="veg_block">
+        <h3>Non Veg <span class="non_veg"></span></h3>
+        <h5>0</h5>
+      </div>
+      <div>
+          <ion-range color="danger" pin="true" no-padding></ion-range>
+      </div>
+    </div>
   </div>
 </ion-content>

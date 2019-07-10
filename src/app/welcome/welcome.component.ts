@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -10,6 +9,17 @@ export class WelcomeComponent implements OnInit {
     initialSlide: 1,
     speed: 400,
     parallax: true,
+    spaceBetween: 100,
+    effect: 'flip',
+    fadeEffect: {
+      crossFade: true
+    },
+    autoplay: {
+      delay: 5000,
+    },
+    lazy: {
+      loadPrevNext: true,
+    },
   };
   isWelcome = true;
   constructor() { }

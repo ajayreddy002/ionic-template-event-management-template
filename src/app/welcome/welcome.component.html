@@ -1,48 +1,64 @@
 <div class="welcome_block" *ngIf="isWelcome">
-  <div class="blue_layer"></div>
-  <div class="text_block">
-    <h2>Welcome!</h2>
-    <button type="button" (click)="getSlider()">Get Started</button>
+  <h1>Cater<span class="binge">binge</span></h1>
+  <p>Catering service made simple</p>
+  <img src="../../assets/images/buffet.svg" alt="">
+  <div class="btn_block">
+    <ion-fab horizontal="center" slot="fixed">
+      <ion-fab-button size="small" type="md" (click)="getSlider()">
+        <ion-icon name="arrow-dropright" type="md"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </div>
 </div>
-<div class="slider_block" *ngIf="!isWelcome">
-  <div>
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
-        <img src="../../assets/chef2.jpg" alt="">
-        <div class="slide_text">
-          <h1>Easy to order your food</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
-            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
-        </div>
-      </ion-slide>
-      <ion-slide>
-        <img src="../../assets/food1.jpg" alt="">
-        <div class="slide_text">
-          <h1>Easy to prepare your food</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
-            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
-        </div>
-      </ion-slide>
-      <ion-slide>
-        <img src="../../assets/chef1.jpg" alt="">
-        <div class="slide_text">
-          <h1>Easy to prepare your food</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, risus a bibendum mollis, augue
-            tortor elementum nibh, eget scelerisque tellus odio sed est. </p>
-        </div>
-      </ion-slide>
-      <ion-slide>
-        <img src="../../assets/food2.jpg" alt="">
-        <div class="last_slide_text">
-          <h1>Why Are you waiting?</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button type="button" routerLink="booking">Lets Expolre!</button>
-        </div>
-      </ion-slide>
-    </ion-slides>
-    <div class="skip-class">
-      <p routerLink="booking">Skip -></p>
-    </div>
-  </div>
+<div class="slide_block" *ngIf="!isWelcome">
+  <h2 class="how">HOW IT WORKS</h2>
+  <ion-slides pager [options]="slideOpts">
+    <ion-slide>
+      <img src="../../assets/images/howit-1.jpg" alt="">
+      <div class="slide_text">
+        <h2>Step 1</h2>
+        <p>Enter when and where you want the catering to be executed.
+        </p>
+      </div>
+      <div class="skip-block">
+        <p routerLink="login">Skip</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/images/howit-2.jpg" alt="">
+      <div class="slide_text">
+        <h2>Step 2</h2>
+        <p>Start building your menu from the vast collection of dishes we serve. Choose as many dishes as you can,
+          diversity is never a problem, Our wide range of chefs represents their excellence in your food.
+        </p>
+      </div>
+      <div class="skip-block">
+        <p routerLink="login">Skip</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/images/howit-3.jpg" alt="">
+      <div class="slide_text">
+        <h2>Step 3</h2>
+        <p>Review the selected professional chefs chosen as per their proficiency to cook your customized menu, change
+          the chefs after going through the review history of each individual chefs involved in cooking your menu.
+        </p>
+      </div>
+      <div class="skip-block">
+        <p routerLink="login">Skip</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../assets/images/howit-4.jpg" alt="">
+      <div class="slide_text">
+        <h2>Step 4</h2>
+        <p>Select an event organizer to take care of the service or simply proceed to payment to self-organize your
+          event.
+        </p>
+      </div>
+      <div class="skip-block">
+        <p routerLink="login">Let's Go</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </div>
