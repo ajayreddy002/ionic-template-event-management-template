@@ -1,11 +1,16 @@
 <div>
-  <div class="sign_in_block">
+  <div class="sign_in_block d-lg-none">
     <h1>Cater<span class="binge">binge</span></h1>
     <img slot="center" *ngIf="isSignIn" src="../../assets/images/login.svg" alt="">
     <img slot="center" *ngIf="isReg" src="../../assets/images/signup.svg" alt="">
     <div class="signi_in">
       <button class="sign" [ngClass]="{'active': isSignIn}" (click)="showSignInForm('signin')">Signin</button>
       <button class="reg" [ngClass]="{'active1': isReg}" (click)="showRegForm('register')">Register</button>
+    </div>
+  </div>
+  <div class="lg_title">
+    <div class="d-none d-lg-block">
+      <h1>Cater<span class="binge">binge</span></h1>
     </div>
   </div>
   <div class="input_block" *ngIf="isSignIn">
@@ -23,7 +28,7 @@
       <button type="button" routerLink="/tabs">Sign In</button>
       <p>Forgot Password ?</p>
       <button type="button" class="social">Sign in with facebook</button>
-      <p routerLink="/tabs">Skip</p>
+      <!-- <p routerLink="/tabs">Skip</p> -->
     </div>
   </div>
   <div class="input_block" *ngIf="isReg">
